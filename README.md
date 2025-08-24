@@ -1,8 +1,34 @@
 # PySlice: Python Lexer Generator
-PySlice is a Python lexer generator that reads `.lex` files and outputs a lexer
-## Syntax
-The syntax of a .lex file goes like this:
-```
+
+[![GitHub release](https://img.shields.io/github/v/release/Never-touched-grass/pyslice)](https://github.com/Never-touched-grass/pyslice/releases)
+[![License](https://img.shields.io/github/license/Never-touched-grass/pyslice)](LICENSE)
+
+**PySlice** is a fast and lightweight **lexer generator for Python**, written in Rust. It reads `.lex` files and generates a ready-to-use Python lexer.
+
+---
+
+## ✨ Features
+- ✅ Simple `.lex` syntax
+- ✅ Generates pure Python code
+- ✅ Cross-platform (Windows & Linux)
+- ✅ Ignore tokens using `IGNORE` keyword
+
+---
+
+## 📦 Installation
+
+Download the latest release from the [**Releases page**](https://github.com/Never-touched-grass/pyslice/releases):
+
+- **Windows**: `pyslice.exe`
+- **Linux**: `pyslice`
+
+(Optional) Add it to your `PATH` for easy use.
+
+---
+
+## 📝 Example `.lex` File
+
+```lex
 ; Comments start with a semicolon
 ; Token definitions: NAME    REGEX    [OPTIONS]
 
@@ -14,11 +40,6 @@ MULT         \*
 DIV          /
 LPAREN       \(
 RPAREN       \)
-WHITESPACE   [ \t\n]+    IGNORE 
-; The token above is ignored, due to the 'IGNORE' keyword.
+WHITESPACE   [ \t\n]+    IGNORE
 COMMENT      ;.*         IGNORE
 ```
-## Usage
-Say you saved the file above as `mylexer.lex`. You would run the following command:
-`pyslice mylexer.lex lexer.py`
-That command parses mylexer.lex and outputs lexer.py.
