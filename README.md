@@ -1,5 +1,5 @@
 # PySlice: Python Lexer Generator
-
+Releases
 [![GitHub release](https://img.shields.io/github/v/release/Never-touched-grass/pyslice)](https://github.com/Never-touched-grass/pyslice/releases)
 [![License](https://img.shields.io/github/license/Never-touched-grass/pyslice)](LICENSE)
 
