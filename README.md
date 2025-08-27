@@ -23,6 +23,7 @@ Download the latest release from the [**Releases page**](https://github.com/Neve
 
 - **Windows**: `pyslice.exe`
 - **Linux**: `pyslice`
+- **For all Linux users, make sure to `chmod +x pyslice` and run `./pyslice` to use it**
 
 (Optional) Add it to your `PATH` for easy use.
 
