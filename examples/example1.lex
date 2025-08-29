@@ -14,4 +14,4 @@ PLUS \+
 MINUS \-
 SLASH /
 STAR \*
-; The above code corresponds t0 example1.py
+; The above code corresponds to example1.py
