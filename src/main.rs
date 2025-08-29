@@ -32,7 +32,6 @@ fn main() {
             let inp_trim = inp.trim();
             if inp_trim == "exit" { break; }
             if inp_trim.is_empty() { continue; }
-            if inp_trim == "exit" { break; }
             let tokens = match confparse::parse(input_path) {
                 Ok(toks) => toks,
                 Err(e) => {
@@ -44,7 +43,7 @@ fn main() {
             let mut py_code = generator::generate(tokens);
             let verbose_flag = "False"; 
             py_code.push_str(&format!(
-                "\nlexer = Lexer(\"{}\", verbose={})\nfor token in lexer.tokenize():\n    print(token)\n",
+                "\nlexer = Lexer('{}', verbose={})\nfor token in lexer.tokenize():\n    print(token)\n",
                 inp_trim, verbose_flag
             ));
             std::fs::write("temp.py", py_code).expect("Failed to write temp.py");
@@ -88,7 +87,7 @@ fn main() {
 
         let mut py_code = generator::generate(tokens);
         py_code.push_str(&format!(
-            "\nlexer = Lexer(\"{}\", verbose={})\nfor token in lexer.tokenize():\n    print(token)\n",
+            "\nlexer = Lexer('{}', verbose={})\nfor token in lexer.tokenize():\n    print(token)\n",
             input_stream, verbose_flag
         ));
 
