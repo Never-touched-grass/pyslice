@@ -14,7 +14,7 @@ Releases
 - ✅ Ignore tokens using `IGNORE` keyword
 - ✅ Run --test to test your lexer on an input string
 - ✅ Run --verbose on --test to get verbose output
-- ✅ Run `pyslice <lexer.lex> <--verbose> for the REPL.
+- ✅ Run `pyslice <lexer.lex> <--verbose>` for the REPL.
 ---
 
 ## 📦 Installation
